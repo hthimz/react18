@@ -1,0 +1,22 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "getting started with react@18",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hthimz/react18.git"
+  },
+  "author": "Himanshu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hthimz/react18/issues"
+  },
+  "homepage": "https://github.com/hthimz/react18#readme",
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  }
+}
