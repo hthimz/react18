@@ -10,8 +10,6 @@ import {
   Dropdown,
   Container,
   Button,
-  useInput,
-  Loading,
   Popover,
 } from "@nextui-org/react";
 const FunctionalBody = () => {
@@ -44,13 +42,13 @@ const FunctionalBody = () => {
       mode: "no-cors", // no-cors, *cors, same-origin
       cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached,
     };
-    console.log("Byeee data", raw);
+
     fetch(
       "https://script.google.com/macros/s/AKfycbzTged7oQO1nqB-g1kYxHbi9tYJLnrg_7twUZbTbqGyYMg5ZtjTvy1n0a9a3FC-HvIQ/exec?action=addUser",
       requestOptions
     )
       .then((response) => response.text())
-      .then((result) =>{
+      .then(() =>{
         setIsOpen(true);
         setTimeout(() => {
         setIsOpen(false);
@@ -58,13 +56,13 @@ const FunctionalBody = () => {
         setWhatsappNumber("");
         setTypeOfBusiness("");
         setSelectedFundRequirementRange("Rs.25L - Rs.1Cr");
-        console.log("here the result is",result)})
+       })
       .catch((error) => console.log("error", error));
   };
 
   return (
     <Grid.Container gap={1} justify="center">
-      <Grid xs={6}>
+      <Grid xs={12} sm={6}>
         <Image
           width={480}
           height={480}
@@ -73,7 +71,7 @@ const FunctionalBody = () => {
           objectFit="cover"
         />
       </Grid>
-      <Grid xs={6}>
+      <Grid xs={12} sm={6}>
         <Container fluid>
           <Card css={{ $$cardColor: "$colors$default" }}>
             <Card.Body>
